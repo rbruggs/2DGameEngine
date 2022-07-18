@@ -88,7 +88,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -387,6 +387,7 @@
     <ClInclude Include="libs\glm\vector_relational.hpp" />
     <ClInclude Include="libs\imgui\imconfig.h" />
     <ClInclude Include="libs\imgui\imgui.h" />
+    <ClInclude Include="libs\imgui\imgui_impl_sdl.h" />
     <ClInclude Include="libs\imgui\imgui_internal.h" />
     <ClInclude Include="libs\imgui\imgui_sdl.h" />
     <ClInclude Include="libs\imgui\imstb_rectpack.h" />
@@ -398,9 +399,54 @@
     <ClInclude Include="libs\lua\luaconf.h" />
     <ClInclude Include="libs\lua\lualib.h" />
     <ClInclude Include="libs\sol\sol.hpp" />
-    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\AssetStore\AssetStore.h" />
+    <ClInclude Include="src\Components\AnimationComponent.h" />
+    <ClInclude Include="src\Components\BoxColliderComponent.h" />
+    <ClInclude Include="src\Components\CameraFollowComponent.h" />
+    <ClInclude Include="src\Components\HealthComponent.h" />
+    <ClInclude Include="src\Components\KeyboardControlledComponent.h" />
+    <ClInclude Include="src\Components\ProjectileComponent.h" />
+    <ClInclude Include="src\Components\ProjectileEmitterComponent.h" />
+    <ClInclude Include="src\Components\RigidBodyComponent.h" />
+    <ClInclude Include="src\Components\SpriteComponent.h" />
+    <ClInclude Include="src\Components\TextLabelComponent.h" />
+    <ClInclude Include="src\Components\TransformComponent.h" />
+    <ClInclude Include="src\ECS\ECS.h" />
+    <ClInclude Include="src\EventBus\Event.h" />
+    <ClInclude Include="src\EventBus\EventBus.h" />
+    <ClInclude Include="src\Events\CollisionEvent.h" />
+    <ClInclude Include="src\Events\KeyPressedEvent.h" />
+    <ClInclude Include="src\Game\Game.h" />
+    <ClInclude Include="src\Logger\Logger.h" />
+    <ClInclude Include="src\Systems\AnimationSystem.h" />
+    <ClInclude Include="src\Systems\CameraMovementSystem.h" />
+    <ClInclude Include="src\Systems\CollisionSystem.h" />
+    <ClInclude Include="src\Systems\DamageSystem.h" />
+    <ClInclude Include="src\Systems\KeyboardControlSystem.h" />
+    <ClInclude Include="src\Systems\MovementSystem.h" />
+    <ClInclude Include="src\Systems\ProjectileEmitSystem.h" />
+    <ClInclude Include="src\Systems\ProjectileLifecycleSystem.h" />
+    <ClInclude Include="src\Systems\RenderColliderSystem.h" />
+    <ClInclude Include="src\Systems\RenderGUISystem.h" />
+    <ClInclude Include="src\Systems\RenderHealthBarSystem.h" />
+    <ClInclude Include="src\Systems\RenderSystem.h" />
+    <ClInclude Include="src\Systems\RenderTextSystem.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\tilemaps\._jungle.map" />
+    <None Include="assets\tilemaps\jungle.map" />
+    <None Include="Debug\2DGameEngine.exe.recipe" />
+    <None Include="Debug\2DGameEngine.ilk" />
+    <None Include="Debug\vc142.idb" />
+    <None Include="Debug\vc142.pdb" />
+    <None Include="libFLAC-8.dll" />
+    <None Include="libjpeg-9.dll" />
+    <None Include="libmodplug-1.dll" />
+    <None Include="libmpg123-0.dll" />
+    <None Include="libogg-0.dll" />
+    <None Include="libopus-0.dll" />
+    <None Include="libopusfile-0.dll" />
+    <None Include="libpng16-16.dll" />
     <None Include="libs\glm\detail\func_common.inl" />
     <None Include="libs\glm\detail\func_common_simd.inl" />
     <None Include="libs\glm\detail\func_exponential.inl" />
@@ -536,16 +582,105 @@
     <None Include="libs\glm\LICENSE" />
     <None Include="libs\imgui\LICENSE" />
     <None Include="libs\lua\LICENCE" />
+    <None Include="libtiff-5.dll" />
+    <None Include="libvorbis-0.dll" />
+    <None Include="libvorbisfile-3.dll" />
+    <None Include="libwebp-7.dll" />
+    <None Include="lua53.dll" />
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
+    <None Include="SDL2_mixer.dll" />
+    <None Include="SDL2_ttf.dll" />
+    <None Include="zlib1.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libs\glm\detail\glm.cpp" />
     <ClCompile Include="libs\imgui\imgui.cpp" />
     <ClCompile Include="libs\imgui\imgui_demo.cpp" />
     <ClCompile Include="libs\imgui\imgui_draw.cpp" />
+    <ClCompile Include="libs\imgui\imgui_impl_sdl.cpp" />
     <ClCompile Include="libs\imgui\imgui_sdl.cpp" />
     <ClCompile Include="libs\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\AssetStore\AssetStore.cpp" />
+    <ClCompile Include="src\ECS\ECS.cpp" />
+    <ClCompile Include="src\Game\Game.cpp" />
+    <ClCompile Include="src\Logger\Logger.cpp" />
     <ClCompile Include="src\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libs\lua\liblua53.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\2DGameEngine.Build.CppClean.log" />
+    <Text Include="Debug\2DGameEngine.log" />
+    <Text Include="Debug\2DGameEngine.vcxproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\ECS.obj" />
+    <Object Include="Debug\ESC.obj" />
+    <Object Include="Debug\Game.obj" />
+    <Object Include="Debug\glm.obj" />
+    <Object Include="Debug\imgui.obj" />
+    <Object Include="Debug\imgui_demo.obj" />
+    <Object Include="Debug\imgui_draw.obj" />
+    <Object Include="Debug\imgui_sdl.obj" />
+    <Object Include="Debug\imgui_widgets.obj" />
+    <Object Include="Debug\Logger.obj" />
+    <Object Include="Debug\Main.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\._pico8.ttf" />
+    <Font Include="assets\fonts\arial.ttf" />
+    <Font Include="assets\fonts\charriot.ttf" />
+    <Font Include="assets\fonts\pico8.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\images\._bullet.png" />
+    <Image Include="assets\images\._chopper-spritesheet.png" />
+    <Image Include="assets\images\._chopper.png" />
+    <Image Include="assets\images\._landing-base.png" />
+    <Image Include="assets\images\._radar.png" />
+    <Image Include="assets\images\._takeoff-base.png" />
+    <Image Include="assets\images\._tank-panther-down.png" />
+    <Image Include="assets\images\._tank-panther-left.png" />
+    <Image Include="assets\images\._tank-panther-right.png" />
+    <Image Include="assets\images\._tank-panther-up.png" />
+    <Image Include="assets\images\._tank-tiger-down.png" />
+    <Image Include="assets\images\._tank-tiger-left.png" />
+    <Image Include="assets\images\._tank-tiger-right.png" />
+    <Image Include="assets\images\._tank-tiger-up.png" />
+    <Image Include="assets\images\._tree.png" />
+    <Image Include="assets\images\._truck-ford-down.png" />
+    <Image Include="assets\images\._truck-ford-killed.png" />
+    <Image Include="assets\images\._truck-ford-left.png" />
+    <Image Include="assets\images\._truck-ford-right.png" />
+    <Image Include="assets\images\._truck-ford-up.png" />
+    <Image Include="assets\images\bullet.png" />
+    <Image Include="assets\images\chopper-spritesheet.png" />
+    <Image Include="assets\images\chopper.png" />
+    <Image Include="assets\images\landing-base.png" />
+    <Image Include="assets\images\radar.png" />
+    <Image Include="assets\images\takeoff-base.png" />
+    <Image Include="assets\images\tank-panther-down.png" />
+    <Image Include="assets\images\tank-panther-left.png" />
+    <Image Include="assets\images\tank-panther-right.png" />
+    <Image Include="assets\images\tank-panther-up.png" />
+    <Image Include="assets\images\tank-tiger-down.png" />
+    <Image Include="assets\images\tank-tiger-left.png" />
+    <Image Include="assets\images\tank-tiger-right.png" />
+    <Image Include="assets\images\tank-tiger-up.png" />
+    <Image Include="assets\images\tree.png" />
+    <Image Include="assets\images\truck-ford-down.png" />
+    <Image Include="assets\images\truck-ford-killed.png" />
+    <Image Include="assets\images\truck-ford-left.png" />
+    <Image Include="assets\images\truck-ford-right.png" />
+    <Image Include="assets\images\truck-ford-up.png" />
+    <Image Include="assets\tilemaps\._jungle.png" />
+    <Image Include="assets\tilemaps\jungle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\._helicopter.wav" />
+    <Media Include="assets\sounds\helicopter.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -777,7 +777,103 @@
     <ClInclude Include="libs\sol\sol.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Game.h">
+    <ClInclude Include="src\Game\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Logger\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\TransformComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\MovementSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ECS\ECS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\RigidBodyComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\ProjectileEmitterComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\AnimationComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\BoxColliderComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\CameraFollowComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\HealthComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\KeyboardControlledComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\ProjectileComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\SpriteComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\TextLabelComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventBus\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventBus\EventBus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\CollisionEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\KeyPressedEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\AnimationSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\CameraMovementSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\CollisionSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\DamageSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\KeyboardControlSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\ProjectileEmitSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\ProjectileLifecycleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderColliderSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderHealthBarSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderTextSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui\imgui_impl_sdl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AssetStore\AssetStore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderGUISystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1181,6 +1277,30 @@
     <None Include="libs\imgui\LICENSE" />
     <None Include="libs\lua\LICENCE" />
     <None Include="libs\glm\LICENSE" />
+    <None Include="Debug\2DGameEngine.exe.recipe" />
+    <None Include="Debug\2DGameEngine.ilk" />
+    <None Include="Debug\vc142.idb" />
+    <None Include="Debug\vc142.pdb" />
+    <None Include="zlib1.dll" />
+    <None Include="SDL2_ttf.dll" />
+    <None Include="SDL2_mixer.dll" />
+    <None Include="SDL2_image.dll" />
+    <None Include="SDL2.dll" />
+    <None Include="libFLAC-8.dll" />
+    <None Include="libjpeg-9.dll" />
+    <None Include="libmodplug-1.dll" />
+    <None Include="libmpg123-0.dll" />
+    <None Include="libogg-0.dll" />
+    <None Include="libopus-0.dll" />
+    <None Include="libopusfile-0.dll" />
+    <None Include="libpng16-16.dll" />
+    <None Include="libtiff-5.dll" />
+    <None Include="libvorbis-0.dll" />
+    <None Include="libvorbisfile-3.dll" />
+    <None Include="libwebp-7.dll" />
+    <None Include="lua53.dll" />
+    <None Include="assets\tilemaps\._jungle.map" />
+    <None Include="assets\tilemaps\jungle.map" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libs\glm\detail\glm.cpp">
@@ -1204,8 +1324,183 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Game.cpp">
+    <ClCompile Include="src\Game\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Logger\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ECS\ECS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AssetStore\AssetStore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui\imgui_impl_sdl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libs\lua\liblua53.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\2DGameEngine.Build.CppClean.log" />
+    <Text Include="Debug\2DGameEngine.log" />
+    <Text Include="Debug\2DGameEngine.vcxproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\ECS.obj" />
+    <Object Include="Debug\ESC.obj" />
+    <Object Include="Debug\Game.obj" />
+    <Object Include="Debug\glm.obj" />
+    <Object Include="Debug\imgui.obj" />
+    <Object Include="Debug\imgui_demo.obj" />
+    <Object Include="Debug\imgui_draw.obj" />
+    <Object Include="Debug\imgui_sdl.obj" />
+    <Object Include="Debug\imgui_widgets.obj" />
+    <Object Include="Debug\Logger.obj" />
+    <Object Include="Debug\Main.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\._pico8.ttf" />
+    <Font Include="assets\fonts\arial.ttf" />
+    <Font Include="assets\fonts\charriot.ttf" />
+    <Font Include="assets\fonts\pico8.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\images\._bullet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._chopper.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._chopper-spritesheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._landing-base.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._radar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._takeoff-base.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-panther-down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-panther-left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-panther-right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-panther-up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-tiger-down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-tiger-left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-tiger-right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tank-tiger-up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._tree.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._truck-ford-down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._truck-ford-killed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._truck-ford-left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._truck-ford-right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\._truck-ford-up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\bullet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\chopper.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\chopper-spritesheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\landing-base.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\radar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\takeoff-base.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-panther-down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-panther-left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-panther-right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-panther-up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-tiger-down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-tiger-left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-tiger-right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tank-tiger-up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\tree.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\truck-ford-down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\truck-ford-killed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\truck-ford-left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\truck-ford-right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\images\truck-ford-up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\tilemaps\._jungle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\tilemaps\jungle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\._helicopter.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="assets\sounds\helicopter.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>
